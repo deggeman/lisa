@@ -316,7 +316,8 @@ class InvarianceItemBase(RTATestBundle, LoadTrackingHelpers, TestBundle, Exekall
             # executing
             preempted_value=0,
         )
-        df = self._get_trace_signal(task, cpus, signal_name)
+        cpu = self.wlgen_task.children['test']['cpus']
+        df = self._get_trace_signal(task, cpu, signal_name)
         df = df.copy(deep=False)
 
         # Ignore the first activation, as its signals are incorrect
