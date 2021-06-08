@@ -503,6 +503,10 @@ class InvarianceBase(TestBundleBase, LoadTrackingHelpers, abc.ABC):
     """
 
     ITEM_CLS = TypeVar('ITEM_CLS')
+    """
+    Class attribute of a derived class, a.k.a its container class.
+    """
+
 
     NR_FREQUENCIES = 8
     """
